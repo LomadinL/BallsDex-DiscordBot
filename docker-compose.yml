@@ -7,8 +7,9 @@ x-common-env-vars:
     "BALLSDEXBOT_DB_URL=postgres://ballsdex:${POSTGRES_PASSWORD}@postgres:5432/ballsdex"
   # if serving the admin panel online, copy the file "production.example.py" and replace with
   # - DJANGO_SETTINGS_MODULE=config.production
+  #DJANGO_SETTINGS_MODULE=admin_panel.settings
   - &django-settings
-    "DJANGO_SETTINGS_MODULE=admin_panel.settings"
+    "DJANGO_SETTINGS_MODULE=config.production"
 
 
 services:
@@ -24,8 +25,8 @@ services:
         condition: service_completed_successfully
       postgres-db:
         condition: service_healthy
-    # ports:
-    #   - "127.0.0.1:15260:15260"
+        # ports:
+        # - "127.0.0.1:15260:15260"
     networks:
       - internal
     volumes:
@@ -144,8 +145,8 @@ services:
       - *postgres-user
       - POSTGRES_PASSWORD
     # WARNING: before exposing ports, change the default db password in the .env file!
-    # ports:
-    #   - "127.0.0.1:5432:5432"
+    ports:
+      - "127.0.0.1:5432:5432"
     networks:
       - internal
     volumes:  # Persist the db data

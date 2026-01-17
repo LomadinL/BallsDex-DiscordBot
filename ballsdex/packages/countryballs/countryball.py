@@ -16,7 +16,12 @@ from ballsdex.core.metrics import caught_balls
 from ballsdex.core.utils.utils import can_mention
 from bd_models.models import Ball, BallInstance, Player, Special, Trade, TradeObject, balls, specials
 from settings.models import PromptMessage, settings
-
+spawnmsgs=["A wild object has appeared!",
+           "this object can canonically beat you in a fight bro",
+           "this object pmo. Catch it or not, I don't care",
+           "this object was never able to make it to OSCDex",
+           "This object remembers OSCDex's legacy",
+           "emoji waa"]
 if TYPE_CHECKING:
     from ballsdex.core.bot import BallsDexBot
 
@@ -135,6 +140,7 @@ class BallSpawnView(View):
 
     async def on_timeout(self):
         self.catch_button.disabled = True
+        self.rar_btn.disabled = True
         if self.message:
             try:
                 await self.message.edit(view=self)
@@ -149,6 +155,13 @@ class BallSpawnView(View):
             await interaction.response.send_message("I was caught already!", ephemeral=True)
         else:
             await interaction.response.send_modal(CountryballNamePrompt(self))
+
+    @button(style=discord.ButtonStyle.success, label="Rarity")
+    async def rar_btn(self, interaction: discord.Interaction["BallsDexBot"], button: Button):
+        await interaction.response.send_message(
+            f"The rarity of this object is {self.model.rarity}",
+            ephemeral=True,
+        )
 
     @classmethod
     async def from_existing(cls, bot: "BallsDexBot", ball_instance: BallInstance):
@@ -244,7 +257,7 @@ class BallSpawnView(View):
                 )
 
                 self.message = await channel.send(
-                    spawn_message, view=self, file=discord.File(self.model.wild_card.path, filename=file_name)
+                    (random.choice(spawnmsgs)), view=self, file=discord.File(self.model.wild_card.path, filename=file_name)
                 )
                 return True
             else:
@@ -317,6 +330,7 @@ class BallSpawnView(View):
             raise RuntimeError("This ball was already caught!")
         self.caught = True
         self.catch_button.disabled = True
+        self.rar_btn.disabled = True
         caught_time = timezone.now()
         player = player or (await Player.objects.aget_or_create(discord_id=user.id))[0]
         is_new = not await BallInstance.objects.filter(player=player, ball=self.model).aexists()
