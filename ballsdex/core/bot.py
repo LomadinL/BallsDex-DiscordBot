@@ -511,8 +511,7 @@ class BallsDexBot(commands.AutoShardedBot):
             send = interaction.followup.send if interaction.response.is_done() else interaction.response.send_message
             try:
                 await send("Commands desynchronized, contact support to fix this.")
-            except discord.NotFound:
-                pass
+            except discord.NotFound: 
             log.error(error.args[0])
             return
 
