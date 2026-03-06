@@ -25,8 +25,8 @@ services:
         condition: service_completed_successfully
       postgres-db:
         condition: service_healthy
-        # ports:
-        # - "127.0.0.1:15260:15260"
+        #ports:  
+        #- "127.0.0.1:15260:15260"
     networks:
       - internal
     volumes:

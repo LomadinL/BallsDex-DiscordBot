@@ -17,11 +17,13 @@ from ballsdex.core.utils.utils import can_mention
 from bd_models.models import Ball, BallInstance, Player, Special, Trade, TradeObject, balls, specials
 from settings.models import PromptMessage, settings
 spawnmsgs=["A wild object has appeared!",
-           "this object can canonically beat you in a fight bro",
-           "this object pmo. Catch it or not, I don't care",
-           "this object was never able to make it to OSCDex",
-           "This object remembers OSCDex's legacy",
-           "emoji waa"]
+           "this OC can canonically beat you in a fight bro",
+           "this OC pmo. Catch it or not, I don't care",
+           "this OC was never able to make it to OSCDex",
+           "This OC remembers OSCDex's legacy",
+           "emoji waa",
+           "When i was just a wee lad, i found this OC",
+           "This OC is totally one in a million(don't check rarity)"]
 if TYPE_CHECKING:
     from ballsdex.core.bot import BallsDexBot
 
@@ -255,9 +257,9 @@ class BallSpawnView(View):
                     collectibles=settings.plural_collectible_name,
                     emoji=self.bot.get_emoji(self.model.emoji_id),
                 )
-
+                #(random.choice(spawnmsgs)) if this doesn't work
                 self.message = await channel.send(
-                    (random.choice(spawnmsgs)), view=self, file=discord.File(self.model.wild_card.path, filename=file_name)
+                    spawn_message, view=self, file=discord.File(self.model.wild_card.path, filename=file_name)
                 )
                 return True
             else:
