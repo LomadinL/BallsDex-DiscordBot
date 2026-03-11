@@ -33,10 +33,10 @@ artwork_size = [b - a for a, b in zip(*CORNERS)]
 # image viewer. There are options available to specify the ball or the special background,
 # use the "--help" flag to view all options.
 
-title_font = ImageFont.truetype(str(SOURCES_PATH / "PixeloidSans-Bold.ttf"), 100)
+title_font = ImageFont.truetype(str(SOURCES_PATH / "PixeloidSans-Bold.ttf"), 128)
 capacity_name_font = ImageFont.truetype(str(SOURCES_PATH / "PixeloidSans-Bold.ttf"), 90)
-capacity_description_font = ImageFont.truetype(str(SOURCES_PATH / "VCR_OSD_MONO_1.001.ttf"), 75)
-stats_font = ImageFont.truetype(str(SOURCES_PATH / "VCR_OSD_MONO_1.001.ttf"), 110)
+capacity_description_font = ImageFont.truetype(str(SOURCES_PATH / "VCR_OSD_MONO_1.001.ttf"), 70)
+stats_font = ImageFont.truetype(str(SOURCES_PATH / "VCR_OSD_MONO_1.001.ttf"), 120)
 credits_font = ImageFont.truetype(str(SOURCES_PATH / "PixeloidSans-Bold.ttf"), 40)
 
 credits_color_cache = {}
@@ -82,7 +82,7 @@ def draw_card(ball_instance: "BallInstance") -> tuple[Image.Image, dict[str, Any
     capacity_description_lines = (
         wrapped_line
         for newline in ball.capacity_description.splitlines()
-        for wrapped_line in textwrap.wrap(newline, 30)
+        for wrapped_line in textwrap.wrap(newline, 32)
     )
 
     for i, line in enumerate(capacity_description_lines):
