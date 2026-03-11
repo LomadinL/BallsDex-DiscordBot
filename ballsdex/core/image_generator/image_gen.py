@@ -36,7 +36,7 @@ artwork_size = [b - a for a, b in zip(*CORNERS)]
 title_font = ImageFont.truetype(str(SOURCES_PATH / "PixeloidSans-Bold.ttf"), 100)
 capacity_name_font = ImageFont.truetype(str(SOURCES_PATH / "PixeloidSans-Bold.ttf"), 90)
 capacity_description_font = ImageFont.truetype(str(SOURCES_PATH / "VCR_OSD_MONO_1.001.ttf"), 75)
-stats_font = ImageFont.truetype(str(SOURCES_PATH / "VCR_OSD_MONO_1.00001.ttf"), 110)
+stats_font = ImageFont.truetype(str(SOURCES_PATH / "VCR_OSD_MONO_1.001.ttf"), 110)
 credits_font = ImageFont.truetype(str(SOURCES_PATH / "PixeloidSans-Bold.ttf"), 40)
 
 credits_color_cache = {}
