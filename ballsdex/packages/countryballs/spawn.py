@@ -159,13 +159,13 @@ class SpawnManager(BaseSpawnManager):
         if not guild.member_count:
             return False
         elif guild.member_count < 5:
-            time_multiplier = 0.1
+            time_multiplier = 0.3
         elif guild.member_count < 100:
-            time_multiplier = 0.8
+            time_multiplier = 1.2
         elif guild.member_count < 1000:
-            time_multiplier = 0.5
+            time_multiplier = 0.8
         else:
-            time_multiplier = 0.2
+            time_multiplier = 0.4
 
         # manager cannot be increased more than once per 10 seconds
         if not await cooldown.increase(message):
@@ -176,8 +176,8 @@ class SpawnManager(BaseSpawnManager):
             return False
 
         # at this point, the goal is reached
-        if delta_t < 600:
-            # wait for at least 10 minutes before spawning
+        if delta_t < 300:
+            # wait for at least 5 minutes before spawning
             return False
 
         # spawn countryball
@@ -205,16 +205,16 @@ class SpawnManager(BaseSpawnManager):
         ).total_seconds()
         # change how the threshold varies according to the member count, while nuking farm servers
         if guild.member_count < 5:
-            multiplier = 0.1
+            multiplier = 0.3
             range = "1-4"
         elif guild.member_count < 100:
-            multiplier = 0.8
+            multiplier = 1.2
             range = "5-99"
         elif guild.member_count < 1000:
-            multiplier = 0.5
+            multiplier = 0.8
             range = "100-999"
         else:
-            multiplier = 0.2
+            multiplier = 0.4
             range = "1000+"
 
         penalities: list[str] = []
@@ -270,9 +270,9 @@ class SpawnManager(BaseSpawnManager):
         informations: list[str] = []
         if cooldown.lock.locked():
             informations.append("The manager is currently on cooldown.")
-        if delta < 600:
+        if delta < 300:
             informations.append(
-                f"The manager is less than 10 minutes old, {settings.plural_collectible_name} "
+                f"The manager is less than 5 minutes old, {settings.plural_collectible_name} "
                 "cannot spawn at the moment."
             )
         if informations:
