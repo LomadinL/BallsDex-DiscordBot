@@ -12,12 +12,12 @@ from discord.ext import commands
 import asyncio
 import io
 
-from ballsdex.core.models import Ball, Player
-from ballsdex.core.models import balls as countryballs
+from bd_models.models import Ball, Player
+from bd_models.models import balls as countryballs
 from ballsdex.settings import settings
 
 from ballsdex.core.utils.transformers import BallInstanceTransform
-from ballsdex.packages.battle.xe_battle_lib import (
+from battle.bat.xe_battle_lib import (
     BattleBall,
     BattleInstance,
     gen_battle,
@@ -25,7 +25,7 @@ from ballsdex.packages.battle.xe_battle_lib import (
 
 if TYPE_CHECKING:
     from ballsdex.core.bot import BallsDexBot
-log = logging.getLogger("ballsdex.packages.battle")
+log = logging.getLogger("battle.bat")
 
 class SkipBattleView(View):
     def __init__(self, player1_id, player2_id):

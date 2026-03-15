@@ -11224,3 +11224,634 @@ Traceback (most recent call last):
     raise ClientConnectorDNSError(req.connection_key, exc) from exc
 aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway.discord.gg:443 ssl:default [Try again]
 [2026-03-14 13:20:40] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 04:40:27] INFO uvicorn.error: Started server process [1]
+[2026-03-15 04:40:27] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 04:40:27] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 04:40:27] INFO uvicorn.error: Application startup complete.
+[2026-03-15 04:40:27] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 04:40:27] INFO settings.apps: Settings read successfully.
+[2026-03-15 04:41:00] INFO uvicorn.error: Shutting down
+[2026-03-15 04:41:00] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 04:44:32] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 04:44:32] INFO discord.client: logging in using static token
+[2026-03-15 04:44:32] INFO uvicorn.error: Started server process [1]
+[2026-03-15 04:44:32] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 04:44:32] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 04:44:32] INFO uvicorn.error: Application startup complete.
+[2026-03-15 04:44:32] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 04:44:32] INFO settings.apps: Settings read successfully.
+[2026-03-15 04:44:32] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 04:44:33] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: 6af26d74a1544aa1d1c2a201e8f274de).
+[2026-03-15 04:44:35] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 04:44:35] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 04:44:35] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 04:44:35] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 04:44:36] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 04:44:37] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from ballsdex.packages.battle.batcog import Battle
+ModuleNotFoundError: No module named 'ballsdex.packages.battle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'ballsdex.packages.battle'
+[2026-03-15 04:44:37] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 04:44:37] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 04:44:40] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 04:56:34] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 04:56:40] INFO uvicorn.error: Shutting down
+[2026-03-15 04:56:40] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 05:10:21] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 05:10:21] INFO discord.client: logging in using static token
+[2026-03-15 05:10:21] INFO uvicorn.error: Started server process [1]
+[2026-03-15 05:10:21] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 05:10:21] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 05:10:21] INFO uvicorn.error: Application startup complete.
+[2026-03-15 05:10:21] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 05:10:22] INFO settings.apps: Settings read successfully.
+[2026-03-15 05:10:22] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 05:10:22] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: e1157a89719b2f0e17c069687f222aae).
+[2026-03-15 05:10:24] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 05:10:24] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 05:10:25] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 05:10:25] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 05:10:26] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 05:10:27] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from ballsdex.packages.battle.batbat.cog import Battle
+ModuleNotFoundError: No module named 'ballsdex.packages.battle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'ballsdex.packages.battle'
+[2026-03-15 05:10:27] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 05:10:27] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 05:10:29] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 05:10:37] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 05:13:48] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 05:13:48] INFO discord.client: logging in using static token
+[2026-03-15 05:13:48] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 05:13:48] INFO uvicorn.error: Started server process [1]
+[2026-03-15 05:13:48] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 05:13:48] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 05:13:48] INFO uvicorn.error: Application startup complete.
+[2026-03-15 05:13:48] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 05:13:48] INFO settings.apps: Settings read successfully.
+[2026-03-15 05:13:49] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: f319e9cfc95d66effd9c860c194d32c6).
+[2026-03-15 05:13:51] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 05:13:51] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 05:13:51] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 05:13:51] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 05:13:52] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 05:13:53] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from ballsdex.packages.battle.batbat.cog import Battle
+ModuleNotFoundError: No module named 'ballsdex.packages.battle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'ballsdex.packages.battle'
+[2026-03-15 05:13:53] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 05:13:53] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 05:13:55] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 05:20:17] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 05:20:17] INFO uvicorn.error: Shutting down
+[2026-03-15 05:20:17] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 05:20:42] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 05:20:42] INFO discord.client: logging in using static token
+[2026-03-15 05:20:42] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 05:20:43] INFO uvicorn.error: Started server process [1]
+[2026-03-15 05:20:43] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 05:20:43] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 05:20:43] INFO uvicorn.error: Application startup complete.
+[2026-03-15 05:20:43] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 05:20:43] INFO settings.apps: Settings read successfully.
+[2026-03-15 05:20:43] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: 4f89f9b653f89edd971c982d1a6340f7).
+[2026-03-15 05:20:45] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 05:20:45] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 05:20:46] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 05:20:46] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 05:20:47] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 05:20:47] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from ballsdex.battle.bat.cog import Battle
+ModuleNotFoundError: No module named 'ballsdex.battle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'ballsdex.battle'
+[2026-03-15 05:20:47] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 05:20:47] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 05:20:49] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 05:23:28] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 05:23:32] INFO uvicorn.error: Shutting down
+[2026-03-15 05:26:41] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 05:26:41] INFO discord.client: logging in using static token
+[2026-03-15 05:26:42] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 05:26:42] INFO uvicorn.error: Started server process [1]
+[2026-03-15 05:26:42] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 05:26:42] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 05:26:42] INFO uvicorn.error: Application startup complete.
+[2026-03-15 05:26:42] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 05:26:42] INFO settings.apps: Settings read successfully.
+[2026-03-15 05:26:44] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: bdc342fdd347fcf03823a7ea1cea47ef).
+[2026-03-15 05:26:46] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 05:26:46] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 05:26:47] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 05:26:47] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 05:26:48] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 05:26:49] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 758, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 896, in get_code
+  File "<frozen importlib._bootstrap_external>", line 826, in source_to_code
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3
+    from extra.battle.battle.bat.cog import Battle
+                      ^^
+SyntaxError: invalid syntax
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: SyntaxError: invalid syntax (__init__.py, line 3)
+[2026-03-15 05:26:49] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 05:26:49] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 05:26:52] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 05:32:48] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 05:36:52] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 05:36:52] INFO discord.client: logging in using static token
+[2026-03-15 05:36:53] INFO uvicorn.error: Started server process [1]
+[2026-03-15 05:36:53] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 05:36:53] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 05:36:53] INFO uvicorn.error: Application startup complete.
+[2026-03-15 05:36:53] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 05:36:53] INFO settings.apps: Settings read successfully.
+[2026-03-15 05:36:53] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 05:36:53] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: 5fed12edd1d8c95f7bd08a360c8f1c3b).
+[2026-03-15 05:36:55] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 05:36:56] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 05:36:56] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 05:36:56] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 05:36:57] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 05:36:58] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from extra.battle.battlet.cog import Battle
+ModuleNotFoundError: No module named 'extra'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'extra'
+[2026-03-15 05:36:58] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 05:36:58] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 05:36:59] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 05:44:59] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 05:48:10] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 05:48:10] INFO discord.client: logging in using static token
+[2026-03-15 05:48:11] INFO uvicorn.error: Started server process [1]
+[2026-03-15 05:48:11] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 05:48:11] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 05:48:11] INFO uvicorn.error: Application startup complete.
+[2026-03-15 05:48:11] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 05:48:11] INFO settings.apps: Settings read successfully.
+[2026-03-15 05:48:11] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 05:48:12] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: b010ae54a88bbfa675e482d7f4d96c03).
+[2026-03-15 05:48:14] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 05:48:14] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 05:48:14] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 05:48:14] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 05:48:15] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 05:48:16] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from battle.battle.bat.cog import Battle
+ModuleNotFoundError: No module named 'battle.battle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'battle.battle'
+[2026-03-15 05:48:16] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 05:48:16] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 05:48:18] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 06:34:48] INFO ballsdex.packages.admin.balls: lomadinthe2nd soft deleted 🚫 #329 Kone(809).
+[2026-03-15 06:38:33] INFO ballsdex.packages.admin.balls: lomadinthe2nd soft deleted 🚫 #327 Astroglass(807).
+[2026-03-15 06:39:19] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 06:39:42] INFO uvicorn.error: Shutting down
+[2026-03-15 06:39:42] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 13:03:00] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 13:03:00] INFO discord.client: logging in using static token
+[2026-03-15 13:03:00] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 13:03:04] INFO uvicorn.error: Started server process [1]
+[2026-03-15 13:03:04] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 13:03:04] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 13:03:04] INFO uvicorn.error: Application startup complete.
+[2026-03-15 13:03:04] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 13:03:04] INFO settings.apps: Settings read successfully.
+[2026-03-15 13:03:05] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: 655ee752f386895c80e159445340fbca).
+[2026-03-15 13:03:07] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 13:03:07] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 13:03:07] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 13:03:07] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 13:03:09] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 13:03:10] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from battle.ttle.bat.cog import Battle
+ModuleNotFoundError: No module named 'battle.ttle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'battle.ttle'
+[2026-03-15 13:03:11] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 13:03:11] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 13:03:13] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 13:04:00] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 13:04:03] INFO uvicorn.error: Shutting down
+[2026-03-15 13:04:03] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 13:21:47] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 13:21:47] INFO discord.client: logging in using static token
+[2026-03-15 13:21:48] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 13:21:48] INFO uvicorn.error: Started server process [1]
+[2026-03-15 13:21:48] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 13:21:48] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 13:21:48] INFO uvicorn.error: Application startup complete.
+[2026-03-15 13:21:48] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 13:21:48] INFO settings.apps: Settings read successfully.
+[2026-03-15 13:21:48] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: 8891db5ac2c85c03f52badd55c4107e0).
+[2026-03-15 13:21:50] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 13:21:50] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 13:21:50] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 13:21:50] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 13:21:52] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 13:21:53] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from battle.ttle.bat.cog import Battle
+ModuleNotFoundError: No module named 'battle.ttle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'battle.ttle'
+[2026-03-15 13:21:53] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 13:21:53] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 13:21:55] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 13:21:57] INFO uvicorn.access: 172.19.0.3:41160 - "GET / HTTP/1.0" 302
+[2026-03-15 13:22:02] INFO uvicorn.access: 172.19.0.3:41164 - "GET /login/?next=/ HTTP/1.0" 200
+[2026-03-15 13:22:04] WARNING django.request: Not Found: /favicon.ico
+[2026-03-15 13:22:04] INFO uvicorn.access: 172.19.0.3:41174 - "GET /favicon.ico HTTP/1.0" 404
+[2026-03-15 13:22:07] INFO uvicorn.access: 172.19.0.3:48214 - "GET /login/discord/ HTTP/1.0" 302
+[2026-03-15 13:24:05] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 13:24:06] INFO uvicorn.error: Shutting down
+[2026-03-15 13:24:06] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 13:24:44] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 13:24:44] INFO discord.client: logging in using static token
+[2026-03-15 13:24:44] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 13:24:45] INFO uvicorn.error: Started server process [1]
+[2026-03-15 13:24:45] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 13:24:45] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 13:24:45] INFO uvicorn.error: Application startup complete.
+[2026-03-15 13:24:45] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 13:24:45] INFO settings.apps: Settings read successfully.
+[2026-03-15 13:24:45] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: 168d3b0bf1fae105f0e3df6c5b37a69b).
+[2026-03-15 13:24:47] INFO ballsdex.core.bot: Successfully logged in as OCDEX#2184 (1459614981937954931)!
+[2026-03-15 13:24:47] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 13:24:47] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 13:24:47] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 13:24:48] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 13:24:49] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from battle.ttle.bat.cog import Battle
+ModuleNotFoundError: No module named 'battle.ttle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'battle.ttle'
+[2026-03-15 13:24:49] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 13:24:49] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 13:24:51] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 13:25:20] INFO uvicorn.access: 172.19.0.3:38324 - "GET / HTTP/1.0" 302
+[2026-03-15 13:25:20] INFO uvicorn.access: 172.19.0.3:38328 - "GET /login/?next=/ HTTP/1.0" 200
+[2026-03-15 13:25:23] INFO uvicorn.access: 172.19.0.3:42408 - "GET /login/discord/ HTTP/1.0" 302
+[2026-03-15 13:25:38] INFO uvicorn.access: 172.19.0.3:48862 - "POST /login/?next=/ HTTP/1.0" 302
+[2026-03-15 13:25:38] INFO uvicorn.access: 172.19.0.3:48864 - "GET / HTTP/1.0" 200
+[2026-03-15 13:25:45] INFO uvicorn.access: 172.19.0.3:47372 - "GET /settings/settings/ HTTP/1.0" 200
+[2026-03-15 13:25:45] INFO uvicorn.access: 172.19.0.3:47386 - "GET /jsi18n/ HTTP/1.0" 200
+[2026-03-15 13:25:47] INFO uvicorn.access: 172.19.0.3:47392 - "GET /settings/settings/1/change/ HTTP/1.0" 200
+[2026-03-15 13:25:48] INFO uvicorn.access: 172.19.0.3:47396 - "GET /jsi18n/ HTTP/1.0" 200
+[2026-03-15 13:26:56] INFO uvicorn.access: 172.19.0.3:44862 - "POST /settings/settings/1/change/ HTTP/1.0" 302
+[2026-03-15 13:26:56] INFO uvicorn.access: 172.19.0.3:44872 - "GET /settings/settings/ HTTP/1.0" 200
+[2026-03-15 13:26:56] INFO uvicorn.access: 172.19.0.3:44874 - "GET /jsi18n/ HTTP/1.0" 200
+[2026-03-15 13:31:17] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 13:31:21] INFO uvicorn.error: Shutting down
+[2026-03-15 13:31:21] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 13:31:53] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 13:31:53] INFO discord.client: logging in using static token
+[2026-03-15 13:31:54] INFO uvicorn.error: Started server process [1]
+[2026-03-15 13:31:54] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 13:31:54] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 13:31:54] INFO uvicorn.error: Application startup complete.
+[2026-03-15 13:31:54] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 13:31:54] INFO settings.apps: Settings read successfully.
+[2026-03-15 13:31:54] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 13:31:54] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: d41903ad50ff62aff94ac671f2f11554).
+[2026-03-15 13:31:56] INFO ballsdex.core.bot: Successfully logged in as BallsdexDevBot#9264 (1482728174235287727)!
+[2026-03-15 13:31:56] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 13:31:57] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 13:31:57] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 13:32:01] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 13:32:02] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from battle.ttle.bat.cog import Battle
+ModuleNotFoundError: No module named 'battle.ttle'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'battle.ttle'
+[2026-03-15 13:32:02] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 13:32:02] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 13:32:05] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 13:32:15] INFO uvicorn.access: 172.19.0.3:58864 - "GET /settings/settings/1/change/ HTTP/1.0" 200
+[2026-03-15 13:32:15] INFO uvicorn.access: 172.19.0.3:58866 - "GET /jsi18n/ HTTP/1.0" 200
+[2026-03-15 13:37:25] INFO uvicorn.access: 172.19.0.3:56654 - "POST /settings/settings/1/change/ HTTP/1.0" 302
+[2026-03-15 13:37:26] INFO uvicorn.access: 172.19.0.3:56664 - "GET /settings/settings/ HTTP/1.0" 200
+[2026-03-15 13:37:26] INFO uvicorn.access: 172.19.0.3:56680 - "GET /jsi18n/ HTTP/1.0" 200
+[2026-03-15 13:39:31] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 13:39:35] INFO uvicorn.error: Shutting down
+[2026-03-15 13:39:35] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 13:43:03] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 13:43:03] INFO discord.client: logging in using static token
+[2026-03-15 13:43:04] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 13:43:08] INFO uvicorn.error: Started server process [1]
+[2026-03-15 13:43:08] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 13:43:08] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 13:43:08] INFO uvicorn.error: Application startup complete.
+[2026-03-15 13:43:08] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 13:43:08] INFO settings.apps: Settings read successfully.
+[2026-03-15 13:43:09] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: 91e2fe9ea5393aa2f58d993c1def7210).
+[2026-03-15 13:43:11] INFO ballsdex.core.bot: Successfully logged in as BallsdexDevBot#9264 (1482728174235287727)!
+[2026-03-15 13:43:11] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 13:43:12] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 13:43:12] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 13:43:13] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 13:43:14] ERROR ballsdex.core.bot: Failed to load package battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/code/extra/battle/battle/bat/__init__.py", line 3, in <module>
+    from battle.bat.cog import Battle
+  File "/code/extra/battle/battle/bat/cog.py", line 15, in <module>
+    from ballsdex.core.models import Ball, Player
+ModuleNotFoundError: No module named 'ballsdex.core.models'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/bot.py", line 356, in on_ready
+    await self.load_extension(path)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'battle.bat' raised an error: ModuleNotFoundError: No module named 'ballsdex.core.models'
+[2026-03-15 13:43:14] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade
+[2026-03-15 13:43:14] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 13:43:18] INFO ballsdex.core.bot: Synced 7 global commands.
+[2026-03-15 13:51:49] ERROR ballsdex.core.commands: Failed to reload extension battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/commands.py", line 68, in reload_package
+    await self.bot.reload_extension(package)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1129, in reload_extension
+    raise errors.ExtensionNotLoaded(name)
+discord.ext.commands.errors.ExtensionNotLoaded: Extension 'battle' has not been loaded.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 968, in _load_from_module_spec
+    setup = getattr(lib, 'setup')
+AttributeError: module 'battle' has no attribute 'setup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/commands.py", line 84, in reload
+    await self.reload_package(package)
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/commands.py", line 70, in reload_package
+    await self.bot.load_extension(package)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 971, in _load_from_module_spec
+    raise errors.NoEntryPointError(key)
+discord.ext.commands.errors.NoEntryPointError: Extension 'battle' has no 'setup' function.
+[2026-03-15 13:52:07] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 13:52:11] INFO uvicorn.error: Shutting down
+[2026-03-15 13:52:11] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 13:53:22] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 13:53:22] INFO discord.client: logging in using static token
+[2026-03-15 13:53:22] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 13:53:23] INFO uvicorn.error: Started server process [1]
+[2026-03-15 13:53:23] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 13:53:23] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 13:53:23] INFO uvicorn.error: Application startup complete.
+[2026-03-15 13:53:23] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 13:53:23] INFO settings.apps: Settings read successfully.
+[2026-03-15 13:53:24] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: 9dff782921fa2a590bd3f04114c6b16b).
+[2026-03-15 13:53:26] INFO ballsdex.core.bot: Successfully logged in as BallsdexDevBot#9264 (1482728174235287727)!
+[2026-03-15 13:53:26] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 13:53:26] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 13:53:26] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 13:53:27] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 13:53:28] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade, battle
+[2026-03-15 13:53:28] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 13:53:29] INFO ballsdex.core.bot: Synced 8 global commands.
+[2026-03-15 14:02:15] INFO ballsdex.packages.admin.balls: lomadinthe2nd gave oc Yoyleshake (`332`) to lomadinlong223. (Special=None ATK=-20 HP=+14).
+[2026-03-15 14:05:55] ERROR ballsdex.core.commands: Failed to reload extension battle
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/commands.py", line 68, in reload_package
+    await self.bot.reload_extension(package)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1129, in reload_extension
+    raise errors.ExtensionNotLoaded(name)
+discord.ext.commands.errors.ExtensionNotLoaded: Extension 'battle' has not been loaded.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 968, in _load_from_module_spec
+    setup = getattr(lib, 'setup')
+AttributeError: module 'battle' has no attribute 'setup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/commands.py", line 84, in reload
+    await self.reload_package(package)
+  File "/opt/venv/lib/python3.14/site-packages/ballsdex/core/commands.py", line 70, in reload_package
+    await self.bot.load_extension(package)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/opt/venv/lib/python3.14/site-packages/discord/ext/commands/bot.py", line 971, in _load_from_module_spec
+    raise errors.NoEntryPointError(key)
+discord.ext.commands.errors.NoEntryPointError: Extension 'battle' has no 'setup' function.
+[2026-03-15 14:11:10] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 14:11:14] INFO uvicorn.error: Shutting down
+[2026-03-15 14:11:14] INFO uvicorn.error: Finished server process [1]
+[2026-03-15 14:12:01] INFO ballsdex: Initialized bot, connecting to Discord...
+[2026-03-15 14:12:01] INFO discord.client: logging in using static token
+[2026-03-15 14:12:02] INFO uvicorn.error: Started server process [1]
+[2026-03-15 14:12:02] INFO uvicorn.error: Waiting for application startup.
+[2026-03-15 14:12:02] INFO uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+[2026-03-15 14:12:02] INFO uvicorn.error: Application startup complete.
+[2026-03-15 14:12:02] INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-03-15 14:12:02] INFO settings.apps: Settings read successfully.
+[2026-03-15 14:12:02] INFO ballsdex.core.bot: Starting up with None shards...
+[2026-03-15 14:12:03] INFO discord.gateway: Shard ID 0 has connected to Gateway (Session ID: ff005bd14c954bbdd35bef628fc6f9bd).
+[2026-03-15 14:12:05] INFO ballsdex.core.bot: Successfully logged in as BallsdexDevBot#9264 (1482728174235287727)!
+[2026-03-15 14:12:05] INFO ballsdex.core.bot: lomadinthe2nd is the owner of this bot.
+[2026-03-15 14:12:05] INFO ballsdex.core.bot: Cache loaded, summary displayed below:
+[2026-03-15 14:12:05] INFO ballsdex.core.bot: Loading packages...
+[2026-03-15 14:12:06] INFO ballsdex.packages.countryballs: Loaded 12 guilds in cache.
+[2026-03-15 14:12:07] INFO ballsdex.core.bot: Packages loaded: admin, balls, guildconfig, countryballs, info, players, trade, battle
+[2026-03-15 14:12:07] INFO ballsdex.core.bot: Syncing global commands...
+[2026-03-15 14:12:13] INFO ballsdex.core.bot: Synced 8 global commands.
+[2026-03-15 14:15:43] INFO ballsdex: Received SIGTERM, stopping the bot...
+[2026-03-15 14:15:47] INFO uvicorn.error: Shutting down
+[2026-03-15 14:15:47] INFO uvicorn.error: Finished server process [1]

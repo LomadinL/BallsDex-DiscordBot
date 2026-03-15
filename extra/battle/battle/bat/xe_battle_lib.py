@@ -54,10 +54,10 @@ class BattleInstance:
     deck_size: int = 4
 
 def get_damage(ball):
-    base = ball.attack * random.uniform(0.5, 1)
-    is_super = random.random() < 0.20
+    base = ball.attack * random.uniform(0.3, 0.6)
+    is_super = random.random() < 1
     if is_super:
-        return int(base * 1.5), True
+        return int(base * 1), True
     return int(base), False
 
 

@@ -1,5 +1,5 @@
 [[ballsdex.packages]]
-location = "/code/extra/battle3.0"
+location = "/code/extra/battle"
 path = "battle"
 enabled = true
 editable = true
