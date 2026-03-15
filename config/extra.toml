@@ -1,0 +1,5 @@
+[[ballsdex.packages]]
+location = "/code/extra/battle3.0"
+path = "battle"
+enabled = true
+editable = true
