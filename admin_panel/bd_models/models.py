@@ -213,8 +213,22 @@ class SpecialEnabledManager(Manager["Special"]):
 class BaseBallInstanceManager[T: models.Model](Manager[T]):
     def with_stats(self):
         return self.annotate(
-            attack=Cast(F("attack_bonus"), models.BigIntegerField()) * F("ball__attack"),
-            health=Cast(F("health_bonus"), models.BigIntegerField()) * F("ball__health"),
+            attack=Cast(
+                models.ExpressionWrapper(
+                    F("ball__attack")
+                    * (models.Value(1.0) + Cast(F("attack_bonus"), models.FloatField()) / models.Value(100.0)),
+                    output_field=models.FloatField(),
+                ),
+                models.BigIntegerField(),
+            ),
+            health=Cast(
+                models.ExpressionWrapper(
+                    F("ball__health")
+                    * (models.Value(1.0) + Cast(F("health_bonus"), models.FloatField()) / models.Value(100.0)),
+                    output_field=models.FloatField(),
+                ),
+                models.BigIntegerField(),
+            ),
         )
 
 
@@ -240,9 +254,7 @@ class Special(models.Model):
         blank=True, null=True, help_text="End time of the event. If blank, the event is permanent"
     )
     rarity = models.FloatField(help_text="Value between 0 and 1, chances of using this special background.")
-    emoji = models.CharField(
-        max_length=20, blank=True, null=True, help_text="Either a unicode character or a discord emoji ID"
-    )
+    emoji = models.CharField(max_length=20, blank=True, null=True, help_text="A unicode character")
     background = models.ImageField(max_length=200, blank=True, null=True, help_text="1428x2000 PNG image")
     tradeable = models.BooleanField(help_text="Whether balls of this event can be traded", default=True)
     hidden = models.BooleanField(help_text="Hides the event from user commands", default=False)
@@ -341,19 +353,19 @@ class BallInstance(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="balls")
     player_id: int
     trade_player = models.ForeignKey(
-        Player, on_delete=models.SET_NULL, related_name="ballinstance_trade_player_set", null=True
+        Player, on_delete=models.SET_NULL, related_name="ballinstance_trade_player_set", null=True, blank=True
     )
     trade_player_id: int | None
     favorite = models.BooleanField(default=False)
-    special = models.ForeignKey(Special, on_delete=models.SET_NULL, null=True)
+    special = models.ForeignKey(Special, on_delete=models.SET_NULL, null=True, blank=True)
     special_id: int | None
-    server_id = models.BigIntegerField(null=True, help_text="Discord server ID where this ball was caught")
+    server_id = models.BigIntegerField(blank=True, null=True, help_text="Discord server ID where this ball was caught")
     tradeable = models.BooleanField(default=True)
     extra_data = models.JSONField(blank=True, default=dict)
     locked = models.DateTimeField(
         blank=True, null=True, help_text="If the instance was locked for a trade and when", default=None
     )
-    spawned_time = models.DateTimeField(null=True)
+    spawned_time = models.DateTimeField(blank=True, null=True)
     deleted = models.BooleanField(default=False, help_text="Whether this instance was deleted or not.")
 
     objects: BallInstanceManager[Self] = BallInstanceManager()
@@ -371,6 +383,9 @@ class BallInstance(models.Model):
             models.Index(fields=("player_id",)),
             models.Index(fields=("special_id",)),
             models.Index(fields=("deleted",)),
+            models.Index(fields=("server_id",)),
+            models.Index(fields=("catch_date",)),
+            models.Index(fields=("server_id", "catch_date")),
         )
 
     def short_description(self, *, is_trade: bool = False) -> str:

@@ -89,7 +89,7 @@ class ExportModal(Modal, title="Data export"):
         zip_file.seek(0)
         if zip_file.tell() > 25_000_000:
             await interaction.followup.send(
-                "Your data is too large to export.Please contact the bot support for more information.", ephemeral=True
+                "Your data is too large to export. Please contact the bot support for more information.", ephemeral=True
             )
             return
         try:
@@ -97,7 +97,7 @@ class ExportModal(Modal, title="Data export"):
             await interaction.followup.send("Your player data has been sent via DMs.", ephemeral=True)
         except discord.Forbidden:
             await interaction.followup.send(
-                "I couldn't send the player data to you in DM. "
+                "I couldn't send the player data to your DMs. "
                 "Either you blocked me or you disabled DMs in this server.",
                 ephemeral=True,
             )
@@ -250,7 +250,17 @@ class RelationContainer(Container):
                 # should be handled by the view's interaction_check, but just in case
                 assert interaction.user.id == player.discord_id
 
-                await interaction.response.defer()
+                await interaction.response.defer(ephemeral=True)
+                view = ConfirmChoiceView(interaction)
+                await interaction.followup.send(
+                    "Are you sure you want to remove this "
+                    f"{'friend' if isinstance(relationship, Friendship) else 'block'}?",
+                    view=view,
+                    ephemeral=True,
+                )
+                await view.wait()
+                if view.value is not True:
+                    return
                 await relationship.adelete()
                 b.disabled = True
                 b.parent.children[0].content += "-# Removed"  # type: ignore
